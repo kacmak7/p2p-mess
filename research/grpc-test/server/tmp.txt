@@ -1,0 +1,11 @@
+#/etc/supervisor/conf.d/myapp.conf
+
+[program:myapp]
+directory=/home/kac/go/src/github.com/kacmak7/p2p-mess/research/server
+command=/home/kac/go/src/github.com/kacmak7/p2p-mess/research/server/server
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/myapp.err
+stdout_logfile=/var/log/myapp.log
+environment=CODENATION_ENV=prod
+environment=GOPATH="/home/kac/go"
